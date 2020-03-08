@@ -9,7 +9,10 @@ The widget does NOT setup any type of observer or monitoring of the build and re
 ### Install the dashboard plugin
 To get dashboard support in Sanity Studio in general:
 
-`sanity install @sanity/dashboard`
+```text
+sanity install @sanity/dashboard
+```
+
 
 ### Install the Amplify widget plugin
 
@@ -19,14 +22,14 @@ sanity install dashboard-widget-amplify
 
 ## Configuring
 
-1. Get the build hook id and token for your Amplify site
+### 1. Get the build hook id and token for your Amplify site
 - Open the Amplify Console,  and select your site
 - Navigate to the `Build settings` area 
 - Look at the `Incoming webhooks` section.  
 - If there is not already a webhook created for the right branch, click `Create webhook` button, then name the webhook; point it at the branch you want to build, and click `Save`
 - Copy the `URL` for you webhook and save it for the configuration step later
 
-2. If you don't already have a dashboardConfig setup, in your `sanity.json` file, append the following line to the `parts` array:
+### 2. If you don't already have a dashboardConfig setup, in your `sanity.json` file, append the following line to the `parts` array:
 
   ```json
   {
@@ -34,7 +37,7 @@ sanity install dashboard-widget-amplify
     "path": "src/dashboardConfig.js"
   }
   ```
-3. Create or update the `src/dashboardConfig.js` file using the webhook URL for your site: 
+### 3.Create or update the `src/dashboardConfig.js` file using the webhook URL for your site: 
 
 ```javascript
 export default {
