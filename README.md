@@ -97,5 +97,5 @@ Want to implement several of the things that the Netlify plugin does.
 - Support multiple sites in array
 - Change to use observable pattern and display progress of build 
 - Use nice image to display progress
-0 Make Layout Width Medium the default
+- Make Layout Width Medium the default
 
