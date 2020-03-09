@@ -11,9 +11,11 @@ class Amplify extends React.Component {
   }
   deploySite = () => {
     const deployLabel = "Deployment requested."
+    const webhook = this.props.webhookUrl + `&operation=startbuild`
+    console.log(webhook)
     this.setState({deployLabel})
     fetch(
-      {webhookUrl},
+      `https://webhooks.amplify.us-east-1.amazonaws.com/prod/webhooks?id=34b58cf5-f2d5-4dcb-af72-fcebae516e71&token=I1NRfbXU6uA9RbyQZK1QXkn0NryQn0Kzv90KchLMP38&operation=startbuild`,
       {method: 'POST'},
       {'Content-Type': 'application/json'}
     )
@@ -32,12 +34,13 @@ class Amplify extends React.Component {
           <h4 className={styles.title}>{title}</h4>
         </header>
         
-        <div className={styles.actions}>
+        <div className={styles.content}>
           <DefaultButton className={styles.button} inverted onClick={this.deploySite}>
             {buttonText}
           </DefaultButton>
-          <p className={styles.status}>{deployLabel}</p>
+          <span className={styles.status}>{deployLabel}</span>
         </div>
+        {/* <div className={styles.footer}></div> */}
       </div>
     )
   }
@@ -46,7 +49,7 @@ class Amplify extends React.Component {
 Amplify.propTypes = {
   title: PropTypes.string,
   buttonText: PropTypes.string,
-  webhookUrl: PropTypes.string + "&operation=startbuild"
+  webhookUrl: PropTypes.string
 };
 
 Amplify.defaultProps = {
