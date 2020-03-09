@@ -92,10 +92,10 @@ The Amplify webhook URL for your site
 6. Add `dashboard-widget-amplify` to the plugin array in `sanity.json`
 7. Add widget config to your `dashboardConfig.js`
 
-## To DO
+## To Do
 Want to implement several of the things that the Netlify plugin does.
-[] Support multiple sites in array
-[] Change to use observable pattern and display progress of build 
-[] Use nice image to display progress
-[] Make Layout Width Medium the default
+- Support multiple sites in array
+- Change to use observable pattern and display progress of build 
+- Use nice image to display progress
+0 Make Layout Width Medium the default
 
