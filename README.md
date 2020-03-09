@@ -37,7 +37,7 @@ sanity install dashboard-widget-amplify
     "path": "src/dashboardConfig.js"
   }
   ```
-### 3.Create or update the `src/dashboardConfig.js` file using the webhook URL for your site: 
+### 3.Create or update the `src/dashboardConfig.js` file using the webhook URL for your site:  (I suggest using layout width medium but you can adjust to your needs)
 
 ```javascript
 export default {
@@ -48,7 +48,8 @@ export default {
         title: 'Amplify Deploy',
         buttonText: 'Deploy to Amplify',
         webhookUrl: 'https://webhooks.amplify.us-east-1.amazonaws.com/prod/webhooks?id=xyxyxyxy-xyxy-xyxy-xyxy-xyxyxyxyxyxy&token=dfhjksfdh7dsfkjdsfsdfhkj098',
-      }
+      },
+      layout: {width: 'medium'}  
     }
   ]
 }
@@ -96,4 +97,5 @@ Want to implement several of the things that the Netlify plugin does.
 [] Support multiple sites in array
 [] Change to use observable pattern and display progress of build 
 [] Use nice image to display progress
+[] Make Layout Width Medium the default
 
