@@ -54,7 +54,17 @@ export default {
 }
 ```
 
+### 4. Add AWS webhooks endpoint to CORS 
+If you are having problems with Amplify not getting your build triggers you may need to add CORS entry
+
+From your Sanity Studio directory:
+  '''text
+    sanity cors add 'webhooks.amplify.us-east-1.amazonaws.com/*'
+  '''
+Allow credentials to be sent from this origin? Please read the warning above?  Answer No (default answer)
+
 ## Options
+
 
 ### `title` (optional)
 
@@ -78,8 +88,12 @@ The Amplify webhook URL for your site
 3. Link for local development (`yarn link` or `npm link`)
 4. Run build to compile your changes (`yarn build` or `npm run build`)
 5. Link in a local studio folder (`yarn link "sanity-plugin-dashboard-widget-amplify"` or `npm link sanity-plugin-dashboard-widget-amplify`)
-6. Add `sanity-dashboard-widget-amplify` to the plugin array in `sanity.json`
-7. Add `{name: 'amplify'}` to your `dashboardConfig.js`
+6. Add `dashboard-widget-amplify` to the plugin array in `sanity.json`
+7. Add widget config to your `dashboardConfig.js`
 
-
+## To DO
+Want to implement several of the things that the Netlify plugin does.
+[] Support multiple sites in array
+[] Change to use observable pattern and display progress of build 
+[] Use nice image to display progress
 
