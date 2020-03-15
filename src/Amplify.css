@@ -25,7 +25,7 @@
 }
 
 .status {
-  padding: 0 var(--medium-padding);
+  padding: var(--small-padding) var(--medium-padding);
   color:#ea1010;
 }
 
