@@ -25,7 +25,8 @@
 }
 
 .status {
-  padding: var(--small-padding) var(--medium-padding);
+  padding: var(--medium-padding) var(--medium-padding);
+  display: inline-block;
   color:#ea1010;
 }
 
