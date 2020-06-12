@@ -14,7 +14,7 @@ class Amplify extends React.Component {
     const webhook = this.props.webhookUrl + `&operation=startbuild`
     this.setState({deployLabel})
     fetch(
-      `https://webhooks.amplify.us-east-1.amazonaws.com/prod/webhooks?id=34b58cf5-f2d5-4dcb-af72-fcebae516e71&token=I1NRfbXU6uA9RbyQZK1QXkn0NryQn0Kzv90KchLMP38&operation=startbuild`,
+      webhook,
       {method: 'POST'},
       {'Content-Type': 'application/json'}
     )
